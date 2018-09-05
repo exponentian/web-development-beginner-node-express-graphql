@@ -24,12 +24,12 @@ Target audiences:
 
 ## Overview of College
 
-> This is a simple toy example for learining GraphQL and Apollo. There are two models such as **Professor** and **Course**. Threre are important keywords: **query**, **resolve**, **type**, and **mutation**, so a folder structure of schema is divided by four parts.
+> This is a simple toy example for learining GraphQL and Apollo. There are two models such as **Professor** and **Course**. Threre are important keywords: **query**, **resolve**, **type**, and **mutation**, so a folder structure of schema is divided by four parts. There are basic CRUD operations such as get, add, update and remove for each model.
 
 
 A professor has information:
 - Name, 
-- Professor Number, 
+- Professor Number
 - Department
 - Position
 - Courses
@@ -61,7 +61,7 @@ $ git clone https://github.com/exponentian/web-development-beginner-node-express
 $ npm install
 ```
 
-3. Add your MONGOLAB URI in ./config.js
+3. Add your MONGODB URI in ./config.js
 
 4. Start
 
