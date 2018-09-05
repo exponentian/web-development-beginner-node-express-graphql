@@ -28,7 +28,7 @@ Target audiences:
 
 
 A professor has information:
-- Name, 
+- Name
 - Professor Number
 - Department
 - Position
