@@ -15,7 +15,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
 const app = express();
 
 
-// allow cross-origin-requests (CORS)
+// allow Cross-Origin Resource Sharing (CORS)
 app.use( cors() );
 
 app.use('/graphql', graphqlHTTP({
