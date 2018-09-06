@@ -7,7 +7,7 @@ const CourseSchema = new Schema({
     type: String,
     required: true
   },
-  courseCode: {
+  code: {
     type: String,
     required: true
   },

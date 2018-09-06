@@ -20,7 +20,7 @@ const Mutation = new GraphQLObjectType({
       type: ProfessorType,
       args: {
         name: { type: new GraphQLNonNull(GraphQLString) },
-        professorNumber: { type: new GraphQLNonNull(GraphQLInt) },
+        number: { type: new GraphQLNonNull(GraphQLString) },
         department: { type: new GraphQLNonNull(GraphQLString) },
         position: { type: new GraphQLNonNull(GraphQLString) }
       },
@@ -31,7 +31,7 @@ const Mutation = new GraphQLObjectType({
       args: {
         id: { type: new GraphQLNonNull(GraphQLID) },
         name: { type: GraphQLString },
-        professorNumber: { type: GraphQLInt },
+        number: { type: GraphQLString },
         department: { type: GraphQLString },
         position: { type: GraphQLString }
       },
@@ -48,7 +48,7 @@ const Mutation = new GraphQLObjectType({
       type: CourseType,
       args: {
         name: { type: new GraphQLNonNull(GraphQLString) },
-        courseCode: { type: new GraphQLNonNull(GraphQLString) },
+        code: { type: new GraphQLNonNull(GraphQLString) },
         description: { type: new GraphQLNonNull(GraphQLString) },
         professor: { type: new GraphQLNonNull(GraphQLID) },
       },
@@ -59,7 +59,7 @@ const Mutation = new GraphQLObjectType({
       args: {
         id: { type: new GraphQLNonNull(GraphQLID) },
         name: { type: GraphQLString },
-        courseCode: { type: GraphQLString },
+        code: { type: GraphQLString },
         description: { type: GraphQLString },
         professor: { type: GraphQLID }
       },

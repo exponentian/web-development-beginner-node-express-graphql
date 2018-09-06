@@ -13,10 +13,21 @@ exports.getProfessorFromCourse = (parent, args) => Professor.findById(parent.pro
 exports.addProfessor = (parent, args) => {
   const professor = new Professor({
     name: args.name,
-    professorNumber: args.professorNumber,
+    number: args.number,
     department: args.department,
     position: args.position
   });
+
+  /*Professor.countDocuments({number: args.number}, (error, count) => {
+    console.log(count);
+    if (count === 0) {
+      
+
+    } else {
+      return new Error("duplicate number");
+    }
+  });*/
+
   return professor.save();
 };
 
@@ -24,7 +35,7 @@ exports.addProfessor = (parent, args) => {
 exports.updateProfessor = (parent, args) => {
   const data = {};
   if (args.name !== undefined) data.name = args.name;
-  if (args.professorNumber !== undefined) data.professorNumber = args.professorNumber;
+  if (args.number !== undefined) data.number = args.number;
   if (args.department !== undefined) data.department = args.department;
   if (args.position !== undefined) data.position = args.position;
   return Professor.findByIdAndUpdate(args.id, data, {new: true});
@@ -46,7 +57,7 @@ exports.getCoursesByProfessor = (parent, args) => Course.find({ professor: paren
 exports.addCourse = (parent, args) => {
   const course = new Course({
     name: args.name,
-    courseCode: args.courseCode,
+    code: args.code,
     description: args.description,
     professor: args.professor
   });
@@ -57,7 +68,7 @@ exports.addCourse = (parent, args) => {
 exports.updateCourse = (parent, args) => {
   const data = {};
   if (args.name !== undefined) data.name = args.name;
-  if (args.courseCode !== undefined) data.courseCode = args.courseCode;
+  if (args.code !== undefined) data.code = args.code;
   if (args.description !== undefined) data.description = args.description;
   if (args.professor !== undefined) data.professor = args.professor;
   return Course.findByIdAndUpdate(args.id, data, {new: true});

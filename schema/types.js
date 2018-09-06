@@ -20,7 +20,7 @@ const ProfessorType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLID },
     name: { type: GraphQLString },
-    professorNumber: { type: GraphQLInt },
+    number: { type: GraphQLString },
     department: { type: GraphQLString },
     position: { type: GraphQLString },
     courses: { 
@@ -36,7 +36,7 @@ const CourseType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLID },
     name: { type: GraphQLString },
-    courseCode: { type: GraphQLString },
+    code: { type: GraphQLString },
     description: { type: GraphQLString },
     professor: { 
       type: ProfessorType,

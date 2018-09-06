@@ -7,8 +7,8 @@ const ProfessorSchema = new Schema({
     type: String,
     required: true
   },
-  professorNumber: {
-    type: Number,
+  number: {
+    type: String,
     required: true,
     unique: true
   },
@@ -21,6 +21,5 @@ const ProfessorSchema = new Schema({
     required: true
   }
 });
-
 
 module.exports = mongoose.model('Professor', ProfessorSchema);
