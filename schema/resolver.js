@@ -18,16 +18,6 @@ exports.addProfessor = (parent, args) => {
     position: args.position
   });
 
-  /*Professor.countDocuments({number: args.number}, (error, count) => {
-    console.log(count);
-    if (count === 0) {
-      
-
-    } else {
-      return new Error("duplicate number");
-    }
-  });*/
-
   return professor.save();
 };
 
